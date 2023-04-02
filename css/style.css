@@ -1,36 +1,44 @@
-h2{font-family: "Montserrat", sans-serif;}
+body{
+  background-color: #D3D0E3;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+}
 
 /* Scroll */
 
 ::-webkit-scrollbar {
-    width: 0;
-  }
-  
-  ::-webkit-scrollbar:horizontal{
-    height: 0;
-  }
+  width: 0;
+}
 
-  hr{
-    height: 3px; 
-    background-color: black; 
-    width: 30%; 
-    margin-top: -15px; 
-    margin-bottom: 15px;
-    border-radius: 10px;
-  }
-  
-    /* Corousel */
-#carousel{
+::-webkit-scrollbar:horizontal {
+  height: 0;
+}
+
+hr {
+  height: 3px;
+  background-color: black;
+  width: 30%;
+  margin-top: -15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+/* Carousel */
+#carousel {
   margin-top: 3rem;
   text-align: center;
   margin-left: 60px;
   margin-right: 60px;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 10px;
   padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: #fff;
 }
 
-.carousel{
+.carousel {
   display: grid;
   grid-auto-flow: column;
   scroll-behavior: auto;
@@ -41,65 +49,64 @@ h2{font-family: "Montserrat", sans-serif;}
   scrollbar-width: none;
 }
 
-.carousel .card{
+.carousel .card {
   min-width: 400px;
   height: 250px;
 }
 
-.carousel .card img{
+.carousel .card img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
 
-.btn-container{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    margin-top: 20px;
-  }
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+}
 
-  .left{
-    font-size: 40px;
-    background: transparent;
-    color: #000;
-    padding: 0.5rem;
-  }
+.left {
+  font-size: 40px;
+  background: transparent;
+  color: #000;
+  padding: 0.5rem;
+}
 
-  .left:hover{
-    background: #fff;
-    color: #FB6D10;
-    border-radius: 5px;
-  }
+.left:hover {
+  background: #fff;
+  color: #fb6d10;
+  border-radius: 5px;
+}
 
-  .right{
-    font-size: 40px;
-    color: #000;
-    padding: 0.5rem;
-    background: transparent;
-  }
+.right {
+  font-size: 40px;
+  color: #000;
+  padding: 0.5rem;
+  background: transparent;
+}
 
-  .right:hover{
-    background: #fff;
-    color: #FB6D10;
-    border-radius: 5px;
-  }
-
+.right:hover {
+  background: #fff;
+  color: #fb6d10;
+  border-radius: 5px;
+}
 
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 999; 
-  padding-top: 20px; 
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 20px;
   padding-bottom: 20px;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: hidden; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.9); 
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal-content {
@@ -121,7 +128,8 @@ h2{font-family: "Montserrat", sans-serif;}
   height: 150px;
 }
 
-.modal-content, #caption {  
+.modal-content,
+#caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -129,13 +137,21 @@ h2{font-family: "Montserrat", sans-serif;}
 }
 
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .close {
@@ -155,47 +171,47 @@ h2{font-family: "Montserrat", sans-serif;}
   cursor: pointer;
 }
 
-@media screen  and (min-width:768px) and (max-width: 1024px){
-  #corousel{
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #corousel {
     margin-top: 3rem;
     text-align: center;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
 
-  .modal{
+  .modal {
     padding-top: 10rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  
+
   .modal-content {
     max-width: 720px;
     max-height: 720px;
   }
 }
 
-@media screen  and (max-width:767px){
-  #corousel{
+@media screen and (max-width: 767px) {
+  #corousel {
     margin-top: 3rem;
     text-align: center;
     margin-left: 1rem;
     margin-right: 1rem;
   }
 
-  .corousel .card{
+  .corousel .card {
     min-width: 380px;
     height: 250px;
   }
 
-  .modal{
+  .modal {
     padding-top: 10rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  
+
   .modal-content {
     max-width: 350px;
     max-height: 350px;
   }
-} 
+}
